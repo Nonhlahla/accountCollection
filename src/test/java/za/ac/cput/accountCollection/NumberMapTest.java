@@ -1,16 +1,21 @@
 package za.ac.cput.accountCollection;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.Hashtable;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class NumberMapTest {@Test
+class NumberMapTest {
+    @Test
 public void testAccountHMap () {
 
     Hashtable accMap = new Hashtable();
     //Adding Elements in the Map
     System.out.println("<------ Adding Elements in the Map ------>");
-    accMap.put(8, "Savings");
-    accMap.put(4, "Fixed");
-    accMap.put(3, "Cheque");
+    accMap.put(8, "123456");
+    accMap.put(4, "112345");
+    accMap.put(3, "111234");
     System.out.println(accMap);
 
     //Test case for add
@@ -33,7 +38,7 @@ public void testAccountHMap () {
     System.out.println( "What is expected = " + expected1+ "\n Actual = " + actual1+"\n");
 
     //Finding Element in the Map
-    if(accMap.containsValue("Fixed")) {
+    if(accMap.containsValue("112345")) {
         System.out.println(accMap.containsValue("Fixed")+" is found");
     }
     System.out.println(accMap.get(4));
@@ -41,8 +46,8 @@ public void testAccountHMap () {
     //Test Case for Find
     System.out.println("<------ Test case for find---->");
     String actualF = ""+accMap.get(4);
-    String expectedF ="Fixed";
-    assertEquals("Fixed", accMap.get(4));
+    String expectedF ="112345";
+    assertEquals("112345", accMap.get(4));
     System.out.println( "What is expected = " + expectedF+ "\n Actual = " + actualF+"\n");
 
 }
